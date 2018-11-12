@@ -9,7 +9,7 @@ rm ldos_slab*.out
 
 for i in `seq 18 1 22`; do #slab thickness increment index loop (in um)
    # python -u ldos_nanoslab.py -res 60 -wvl $i | tee -a ldos_slab${i}.out; #single-processor version
-    mpirun -np 4 python -u ldos_nanoslab_pmp.py -res 200  -wvl 0.500 -w_init 0.050 -dw 0.005 -n ${i} | tee -a ldos_slab_${i}.out; #parallel version
+    mpirun -np 10 -order-nodes ascending python -u ldos_nanoslab_pmp.py -res 200  -wvl 0.500 -w_init 0.050 -dw 0.005 -n ${i} | tee -a ldos_slab_${i}.out; #parallel version
     grep ldos0: ldos_slab_${i}.out |cut -d, -f2- >> ldos_slab.dat;
     grep normalised ldos_slab_${i}.out | cut -d, -f2- >> flux_slab.dat;
     grep 'slab thickness' ldos_slab_${i}.out | cut -d, -f2- >>w_slab.dat;
