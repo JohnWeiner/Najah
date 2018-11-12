@@ -24,11 +24,11 @@ def main(args):
     slab_center_y=0.5*w  #slab center y coordinate
     sfor_y=w+0.005 #sfor_y = y coordinate of the slit_flux_output_region
     s=0.030 #slit width
-    print("wavelength =", wvl, "μm")
-    print("slab size =",w,"μm")
-    print("center frequency =", fcen, "1/μm")
-    print("slit_flux_output_region y coordinate =", sfor_y, "μm")
-    print("slab center y coordinate =", slab_center_y,"μm")
+    print("wavelength =", wvl, "um")
+    print("slab size =",w,"um")
+    print("center frequency =", fcen, "1/um")
+    print("slit_flux_output_region y coordinate =", sfor_y, "um")
+    print("slab center y coordinate =", slab_center_y,"um")
 
     geometry=[mp.Block(mp.Vector3(mp.inf,w,mp.inf),
                        center=mp.Vector3(0, slab_center_y),
