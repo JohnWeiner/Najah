@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f logs/* error/* output/* images/*
+
+exit
+

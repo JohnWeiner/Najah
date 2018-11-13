@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ x$1 == x ]]; then
+  echo " Usage: $0 Start Increment Maximum"
+  exit -1
+fi
+
+cat /dev/null > RunTimeParameters.lst
+for i in `seq $1 $2 $3`; do
+  echo $i >> RunTimeParameters.lst
+done
+
+exit
