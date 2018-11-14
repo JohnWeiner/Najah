@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# runDir="/home/$USER/Projects/MEEP/Najah/Example10"
-cmd="ldos_nanoslab_mp.sh"
-
-# cd $runDir
-MEEPRun ./$cmd $1
-exit
-

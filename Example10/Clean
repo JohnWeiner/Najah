@@ -2,5 +2,6 @@
 
 rm -f logs/* error/* output/* images/*
 rm -f slab_slit-out/* slab_noslit-out/* out/*
+rm -f *.dat *.png
 exit
 

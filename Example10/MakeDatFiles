@@ -2,12 +2,12 @@
 
 cat /dev/null > ldos_slab.dat
 cat /dev/null > flux_slab.dat
-cat /dev/null > w_slab.dat
+cat /dev/null > wvl_slab.dat
 
 for i in `cat RunTimeParameters.lst`; do
    echo `date`" Processing index: $i"
    grep ldos0:           out/ldos_slab_${i}.out | cut -d, -f2- >> ldos_slab.dat;
    grep normalised       out/ldos_slab_${i}.out | cut -d, -f2- >> flux_slab.dat;
-   grep 'slab thickness' out/ldos_slab_${i}.out | cut -d, -f2- >> w_slab.dat;
+   grep 'slab thickness' out/ldos_slab_${i}.out | cut -d, -f2- >> wvl_slab.dat;
 done
 exit
