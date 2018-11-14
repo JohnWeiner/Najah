@@ -7,7 +7,7 @@ i=$1
 echo `date`" >>>>>>>>>>>>>>>>>>>>> Starting run: ${i}"
 source activate meep
 mkdir slab_noslit-out slab_slit-out out
-python -u ldos_nanoslab_pmp.py -res 200  -wvl 0.500 -w_init 0.050 -dw 0.01 -n $1 | tee -a ldos_slab_${i}.out;
+python -u ldos_nanoslab_mp.py -res 200  -wvl 0.500 -w_init 0.050 -dw 0.01 -n $1 | tee -a ldos_slab_${i}.out;
 cp slab_noslit-out/* .
 cp slab_slit-out/*   .
 mv ldos_slab_${i}.out out/

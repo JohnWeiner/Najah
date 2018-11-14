@@ -43,7 +43,8 @@ def main(args):
                   sources=source,
                   resolution=resolution,
                   boundary_layers=pml_layers,
-                  filename_prefix='slab_noslit')
+                  filename_prefix='slab_noslit',
+                  verbose=True,)
     sim.use_output_directory()
     
     pt=mp.Vector3(0,-0.5*(sy-2.1),0)#point where field intensity is measured (usually at source position)
@@ -86,7 +87,8 @@ def main(args):
                   sources=source,
                   resolution=resolution,
                   boundary_layers=pml_layers,
-                  filename_prefix="slab_slit")
+                  filename_prefix="slab_slit",
+                  verbose=True,)
     sim.use_output_directory()
     
     slit_flux_in_region=mp.FluxRegion(center=mp.Vector3(0, -0.005, 0), size=mp.Vector3(sx, 0, 0)) #same as slab_flux_in_region
