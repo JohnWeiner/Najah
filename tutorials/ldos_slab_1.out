@@ -1,0 +1,150 @@
+slab size = 0.05 um
+center frequency = 1.8181818181818181 1/um
+slit_flux_output_region y coordinate = 0.055 um
+slab center y coordinate = 0.025 um
+-----------
+Initializing structure...
+Working in 2D dimensions.
+Computational cell is 8 x 4 x 0 with resolution 100
+     block, center = (0,0.025,0)
+          size (1e+20,0.05,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (1,1,1)
+time for set_epsilon = 0.823229 s
+lorentzian susceptibility: frequency=7.32593, gamma=0.738804
+lorentzian susceptibility: frequency=6.60165, gamma=0.052426
+lorentzian susceptibility: frequency=3.61417, gamma=0.364563
+lorentzian susceptibility: frequency=0.658148, gamma=3.13427
+drude susceptibility: frequency=1e-10, gamma=0.0387146
+-----------
+Meep: using output directory 'slab_noslit-out'
+creating output file "slab_noslit-out/ldos_nanoslab_wavelength-eps-000000000.h5"...
+on time step 156 (time=0.78), 0.025646 s/step
+on time step 312 (time=1.56), 0.0256524 s/step
+on time step 472 (time=2.36), 0.0250818 s/step
+on time step 632 (time=3.16), 0.0250473 s/step
+on time step 792 (time=3.96), 0.0250497 s/step
+on time step 952 (time=4.76), 0.0250486 s/step
+on time step 1111 (time=5.555), 0.0251605 s/step
+on time step 1272 (time=6.36), 0.024951 s/step
+on time step 1431 (time=7.155), 0.0252554 s/step
+on time step 1591 (time=7.955), 0.0250055 s/step
+on time step 1752 (time=8.76), 0.0249703 s/step
+on time step 1912 (time=9.56), 0.0251172 s/step
+field decay(t = 10.005): 0.23270563952394632 / 0.23270563952394632 = 1.0
+on time step 2072 (time=10.36), 0.0251602 s/step
+on time step 2233 (time=11.165), 0.024847 s/step
+on time step 2394 (time=11.97), 0.0249928 s/step
+on time step 2555 (time=12.775), 0.0249228 s/step
+on time step 2715 (time=13.575), 0.0251081 s/step
+on time step 2875 (time=14.375), 0.0250794 s/step
+on time step 3036 (time=15.18), 0.0249861 s/step
+on time step 3197 (time=15.985), 0.024905 s/step
+on time step 3358 (time=16.79), 0.0249689 s/step
+on time step 3519 (time=17.595), 0.0249806 s/step
+on time step 3680 (time=18.4), 0.0249211 s/step
+on time step 3841 (time=19.205), 0.0249578 s/step
+on time step 4001 (time=20.005), 0.0250246 s/step
+field decay(t = 20.01): 0.00016637742771756197 / 0.23270563952394632 = 0.0007149694698329005
+on time step 4162 (time=20.81), 0.0249609 s/step
+on time step 4321 (time=21.605), 0.0251598 s/step
+on time step 4480 (time=22.4), 0.0252612 s/step
+on time step 4637 (time=23.185), 0.0256147 s/step
+on time step 4798 (time=23.99), 0.0249359 s/step
+on time step 4958 (time=24.79), 0.0251225 s/step
+on time step 5108 (time=25.54), 0.0267431 s/step
+on time step 5269 (time=26.345), 0.0248936 s/step
+on time step 5429 (time=27.145), 0.0250383 s/step
+on time step 5588 (time=27.94), 0.0252437 s/step
+on time step 5750 (time=28.75), 0.0248435 s/step
+on time step 5910 (time=29.55), 0.0250856 s/step
+field decay(t = 30.015): 2.005389457569761e-15 / 0.23270563952394632 = 8.617708886094266e-15
+run 0 finished at t = 30.015 (6003 timesteps)
+incident flux slab = [0.02101266402180108]   transmitted flux slab = [0.004658864334960913]   normed transmitted flux= [0.22171698]
+
+Field time usage:
+     connecting chunks: 0.120996 s
+         time stepping: 140.687 s
+         communicating: 7.98732 s
+     outputting fields: 0.105004 s
+    Fourier transforming: 1.61861 s
+       everything else: 0.641231 s
+
+-----------
+Initializing structure...
+Working in 2D dimensions.
+Computational cell is 8 x 4 x 0 with resolution 100
+     block, center = (0,0.025,0)
+          size (1e+20,0.05,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (1,1,1)
+     block, center = (0,0.025,0)
+          size (0.03,0.05,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (1,1,1)
+time for set_epsilon = 0.825833 s
+lorentzian susceptibility: frequency=7.32593, gamma=0.738804
+lorentzian susceptibility: frequency=6.60165, gamma=0.052426
+lorentzian susceptibility: frequency=3.61417, gamma=0.364563
+lorentzian susceptibility: frequency=0.658148, gamma=3.13427
+drude susceptibility: frequency=1e-10, gamma=0.0387146
+-----------
+Meep: using output directory 'slab_slit-out'
+creating output file "slab_slit-out/ldos_nanoslab_wavelength-eps-000000000.h5"...
+on time step 152 (time=0.76), 0.0263789 s/step
+on time step 312 (time=1.56), 0.0250724 s/step
+on time step 473 (time=2.365), 0.0249868 s/step
+on time step 634 (time=3.17), 0.0248634 s/step
+on time step 794 (time=3.97), 0.02503 s/step
+on time step 955 (time=4.775), 0.0249694 s/step
+on time step 1116 (time=5.58), 0.0248803 s/step
+on time step 1277 (time=6.385), 0.0249614 s/step
+on time step 1437 (time=7.185), 0.0250236 s/step
+on time step 1598 (time=7.99), 0.0249486 s/step
+on time step 1758 (time=8.79), 0.0251454 s/step
+on time step 1918 (time=9.59), 0.0250994 s/step
+field decay(t = 10.005): 0.20596516623845054 / 0.20596516623845054 = 1.0
+on time step 2079 (time=10.395), 0.0249157 s/step
+on time step 2239 (time=11.195), 0.0250736 s/step
+on time step 2400 (time=12), 0.0249661 s/step
+on time step 2561 (time=12.805), 0.0248854 s/step
+on time step 2721 (time=13.605), 0.0250023 s/step
+on time step 2881 (time=14.405), 0.0250182 s/step
+on time step 3041 (time=15.205), 0.0250928 s/step
+on time step 3202 (time=16.01), 0.0249883 s/step
+on time step 3364 (time=16.82), 0.0248377 s/step
+on time step 3525 (time=17.625), 0.0248716 s/step
+on time step 3684 (time=18.42), 0.0252849 s/step
+on time step 3845 (time=19.225), 0.0249625 s/step
+field decay(t = 20.01): 0.0001610432461911868 / 0.20596516623845054 = 0.0007818955463796406
+on time step 4005 (time=20.025), 0.0251223 s/step
+on time step 4166 (time=20.83), 0.0249934 s/step
+on time step 4327 (time=21.635), 0.0249346 s/step
+on time step 4488 (time=22.44), 0.0248719 s/step
+on time step 4649 (time=23.245), 0.0249826 s/step
+on time step 4811 (time=24.055), 0.0247852 s/step
+on time step 4972 (time=24.86), 0.0249065 s/step
+on time step 5134 (time=25.67), 0.0248039 s/step
+on time step 5296 (time=26.48), 0.0247583 s/step
+on time step 5459 (time=27.295), 0.0246711 s/step
+on time step 5620 (time=28.1), 0.0249321 s/step
+on time step 5782 (time=28.91), 0.0247044 s/step
+on time step 5944 (time=29.72), 0.0247527 s/step
+field decay(t = 30.015): 1.6579965696119735e-15 / 0.20596516623845054 = 8.049888240288522e-15
+ldos0:, 1.818181818181818, 0.10122785613841476
+run 0 finished at t = 30.015 (6003 timesteps)
+slit flux net = [0.00530899037796071]    slit_flux_normed = [0.2526567]
+normalised slit flux, 0.25266
+slab thickness:, 0.05
+wavelength:, 550.0
+
+Field time usage:
+     connecting chunks: 0.129514 s
+         time stepping: 139.473 s
+         communicating: 7.91252 s
+     outputting fields: 0.125215 s
+    Fourier transforming: 1.59616 s
+       everything else: 0.855367 s
+
+
+Elapsed run time = 304.0944 s

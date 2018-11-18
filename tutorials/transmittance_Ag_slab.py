@@ -1,5 +1,5 @@
 import meep as mp
-from meep.materials import Graph,Ag,BK7
+from meep.materials import Ag,BK7
 
 resolution = 80 # pixels/micron
 
