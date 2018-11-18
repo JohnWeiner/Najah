@@ -43,7 +43,8 @@ def main(args):
                   sources=source,
                   resolution=resolution,
                   boundary_layers=pml_layers,
-                  filename_prefix='slab_noslit')
+                  filename_prefix='slab_noslit',
+                  verbose=True,)
     sim.use_output_directory()
     
     pt=mp.Vector3(0,-0.5*(sy-2.1),0)#point where field intensity is measured (usually at source position)
