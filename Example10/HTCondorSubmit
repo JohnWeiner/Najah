@@ -1,0 +1,11 @@
++ProjectName          = "TG-CIE170062"
+Executable            = Run-ldos_nanoslab_mp
+Universe              = vanilla   
+Output                = output/Run-ldos_nanoslab_mp.$(Cluster).$(Process).out
+Error                 = error/Run-ldos_nanoslab_mp.$(Cluster).$(Process).err
+Log                   = logs/Run-ldos_nanoslab_mp.$(Cluster).$(Process).log
+transfer_output_files = slab_noslit-out,  slab_slit-out, out
+transfer_input_files  = ldos_nanoslab_pmp.py, ldos_nanoslab_mp.py, ldos_nanoslab_mp.sh
+ShouldTransferFiles   = YES
+WhenToTransferOutput  = ON_EXIT
+Queue arguments from RunTimeParameters.lst

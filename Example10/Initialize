@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+mkdir -p logs error output images
+mkdir -p slab_slit-out slab_noslit-out out
+exit
