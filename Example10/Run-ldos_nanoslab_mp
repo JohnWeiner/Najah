@@ -4,6 +4,9 @@
 cmd="ldos_nanoslab_mp.sh"
 
 # cd $runDir
-MEEPRun ./$cmd $1
+# MEEPRun ./$cmd $1
+source /usr/local/Anaconda3/SetupAnaconda3.sh
+source activate mp
+./$cmd $1
 exit
 

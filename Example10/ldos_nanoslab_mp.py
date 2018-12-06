@@ -6,29 +6,30 @@ import argparse
 from meep.materials import Ag
 
 def main(args):
-    sx=8.0 #spatial extent along x including pmls (μm)
-    sy=4
-    sz=0
-    dpml=1.0
-    cell = mp.Vector3(sx,sy,sz)
-    pml_layers=[mp.PML(dpml)]     
-    resolution=args.res
-    wvl=args.wvl #source wavelength
-    fcen=1/wvl #center frequency
-    df=0 #frequency bandwidth
-    nfreq=1 #number of frequencies
-    dw=args.dw #  slab thickness increment(um)
-    w_init=args.w_init # initial slab thickness(μm)
-    n=args.n
-    w=w_init + n*dw #next slab thicknessw
-    slab_center_y=0.5*w  #slab center y coordinate
-    sfor_y=w+0.005 #sfor_y = y coordinate of the slit_flux_output_region
-    s=0.030 #slit width
-    print("wavelength =", wvl, "μm")
-    print("slab size =",w,"μm")
-    print("center frequency =", fcen, "1/μm")
-    print("slit_flux_output_region y coordinate =", sfor_y, "μm")
-    print("slab center y coordinate =", slab_center_y,"μm")
+    sx             = 8.0 #spatial extent along x including pmls (um)
+    sy             =   4
+    sz             =   0
+    dpml           =  1.0
+    cell           =  mp.Vector3(sx,sy,sz)
+    pml_layers     =  [mp.PML(dpml)]     
+    n              =  args.n
+    resolution     =  args.res
+    dwvl           =  args.dwvl
+    dw             =  args.dw             # slab thickness increment(um)
+    wvl            =  args.wvl + n*dwvl   # source wavelength
+    df             =  0                   # frequency bandwidth
+    nfreq          =  1                   # number of frequencies
+    fcen           =  1 / wvl             # center frequency
+    w_init         =  args.w_init         # initial slab thickness(um)
+    w              =  args.w_init + n*dw  # next slab thicknessw
+    slab_center_y  =  0.5*w               # slab center y coordinate
+    sfor_y         =  w + 0.005           # sfor_y = y coordinate of the slit_flux_output_region
+    s              =  0.030               # slit width
+    print("wavelength =", wvl, "um")
+    print("slab size =",w,"um")
+    print("center frequency =", fcen, "1/um")
+    print("slit_flux_output_region y coordinate =", sfor_y, "um")
+    print("slab center y coordinate =", slab_center_y,"um")
 
     geometry=[mp.Block(mp.Vector3(mp.inf,w,mp.inf),
                        center=mp.Vector3(0, slab_center_y),
@@ -136,9 +137,10 @@ def main(args):
 if __name__ == '__main__':  #begin parsing the arguments in the function call to "main".
     parser = argparse.ArgumentParser() #create the parser object.
     parser.add_argument('-res', type=int, default=50, help='resolution (default: 50 pixels/100 nm)') #resolution argument
-    parser.add_argument('-wvl', type=float, default=500, help='wavelength corresponding to frequency of point dipole(default: 500 nm )') #wavelength argument.
-    parser.add_argument('-w_init', type=float, default =0.050, help='initial slab thickness: (default: 0.050 μm)') #initial slab thickness argument
-    parser.add_argument('-dw',type=float, default=0.002, help='slab thickness increment: (default: 0.002μm') #slab thickness increment argument
+    parser.add_argument('-wvl', type=float, default=0.500, help='wavelength corresponding to frequency of point dipole(default: 500 nm )') #wavelength argument.
+    parser.add_argument('-w_init', type=float, default =0.050, help='initial slab thickness: (default: 0.050 um)') #initial slab thickness argument
+    parser.add_argument('-dw',type=float, default=0.002, help='slab thickness increment: (default: 0.002um') #slab thickness increment argument
+    parser.add_argument('-dwvl',type=float, default=0.010, help='wavelength increment: (default: 10nm') #slab thickness increment argument
     parser.add_argument('-n',type=int, default =1, help='multiple of thickness increment: (default: 1')
     args = parser.parse_args()  #put the arguments created by the parser in args
     main(args) #put args into function "main".
